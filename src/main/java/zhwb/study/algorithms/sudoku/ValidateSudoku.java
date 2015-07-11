@@ -43,6 +43,23 @@ public class ValidateSudoku {
         return true;
     }
 
+    public boolean isValidSudokuV2(char[][] board) {
+        int used1[][] = new int[9][9];
+        int used2[][] = new int[9][9];
+        int used3[][] = new int[9][9];
+
+        for (int i = 0; i < board.length; ++i)
+            for (int j = 0; j < board[i].length; ++j)
+                if (board[i][j] != '.') {
+                    int num = board[i][j] - '0' - 1, k = i / 3 * 3 + j / 3;
+                    if (used1[i][num] == 1|| used2[j][num] ==1|| used3[k][num]==1)
+                        return false;
+                    used1[i][num] = used2[j][num] = used3[k][num] = 1;
+                }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         case1();
     }
@@ -60,5 +77,6 @@ public class ValidateSudoku {
         chars[8] = new char[]{'9', '.', '.', '.', '.', '.', '.', '.', '.'};
 
         System.out.println(new ValidateSudoku().isValidSudoku(chars));
+        System.out.println(new ValidateSudoku().isValidSudokuV2(chars));
     }
 }
