@@ -30,6 +30,12 @@ public class ReverseLinkedList {
         return first;
     }
 
+    public static void main(String[] args) {
+        ListNode node = new ListNode(1);
+        node.next = new ListNode(2);
+        node.next = new ListNode(3);
+        node.next = new ListNode(4);
+    }
 }
 
 class ListNode {
