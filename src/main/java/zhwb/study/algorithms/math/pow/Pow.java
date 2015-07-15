@@ -1,6 +1,10 @@
 package zhwb.study.algorithms.math.pow;
 
 /**
+ * https://leetcode.com/problems/powx-n/
+ *
+ * Implement pow(x, n).
+ *
  * Date: 15/7/13
  * Time: 下午10:08
  *

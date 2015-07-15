@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * https://leetcode.com/problems/merge-intervals/
+ *
  * Description:
  * Given a collection of intervals, merge all overlapping intervals.
  * <p/>

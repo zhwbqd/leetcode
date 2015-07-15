@@ -4,6 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://leetcode.com/problems/valid-sudoku/
+ *
+ * Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+ * The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+ *
  * @author jack.zhang
  * @since 2015/7/11 0011
  */

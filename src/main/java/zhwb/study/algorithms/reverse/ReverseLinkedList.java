@@ -1,6 +1,10 @@
 package zhwb.study.algorithms.reverse;
 
 /**
+ * https://leetcode.com/problems/reverse-linked-list/
+ *
+ * Reverse a singly linked list.
+ *
  * Date: 15/7/12
  * Time: 下午9:42
  *
