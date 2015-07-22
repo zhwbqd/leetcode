@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.reverse;
+package zhwb.study.algorithms.list;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list/

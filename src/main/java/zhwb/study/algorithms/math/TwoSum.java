@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.twosum;
+package zhwb.study.algorithms.math;
 
 import java.util.*;
 

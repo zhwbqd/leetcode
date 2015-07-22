@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.math.pow;
+package zhwb.study.algorithms.math;
 
 /**
  * https://leetcode.com/problems/powx-n/

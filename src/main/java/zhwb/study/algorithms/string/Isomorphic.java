@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.isomorphic;
+package zhwb.study.algorithms.string;
 
 import java.util.*;
 
@@ -20,7 +20,7 @@ import java.util.*;
  * @author jack.zhang
  * @since 2015/7/19 0019
  */
-public class Solution {
+public class Isomorphic {
     public boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -79,9 +79,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().isIsomorphicV2("add", "egg"));
-        System.out.println(new Solution().isIsomorphic("aba", "baa"));
-        System.out.println(new Solution().isIsomorphicV2("aba", "baa"));
+        System.out.println(new Isomorphic().isIsomorphicV2("add", "egg"));
+        System.out.println(new Isomorphic().isIsomorphic("aba", "baa"));
+        System.out.println(new Isomorphic().isIsomorphicV2("aba", "baa"));
 
     }
 }

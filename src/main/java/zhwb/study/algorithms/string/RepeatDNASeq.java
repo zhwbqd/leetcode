@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.dnaseq;
+package zhwb.study.algorithms.string;
 
 import java.util.*;
 

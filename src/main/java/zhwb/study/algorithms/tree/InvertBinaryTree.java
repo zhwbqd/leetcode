@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.reverse;
+package zhwb.study.algorithms.tree;
 
 /**
  * https://leetcode.com/problems/invert-binary-tree/
@@ -50,22 +50,4 @@ public class InvertBinaryTree {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("TreeNode{");
-        sb.append("val=").append(val);
-        sb.append(", left=").append(left);
-        sb.append(", right=").append(right);
-        sb.append('}');
-        return sb.toString();
-    }
-}

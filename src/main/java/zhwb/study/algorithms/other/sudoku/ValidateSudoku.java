@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.sudoku;
+package zhwb.study.algorithms.other.sudoku;
 
 import java.util.HashSet;
 import java.util.Set;
