@@ -36,6 +36,24 @@ public class AddTwoNums {
         //why it cannot pass?
     }
 
+    private int carry;
+
+    public ListNode addTwoNumbersV3(ListNode l1, ListNode l2) {
+        if (l1 == null && l2 == null) {
+            if (carry == 0) {
+                return null;
+            }
+            return new ListNode(1);
+        }
+        int x = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carry;
+        carry = x / 10;
+        x = x % 10;
+        ListNode node = new ListNode(x);
+        node.next = addTwoNumbersV3(l1 == null ? null : l1.next, l2 == null ? null : l2.next);
+        return node;
+        //增加carry, 解决V2问题
+    }
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
@@ -82,6 +100,7 @@ public class AddTwoNums {
         l2.next = new ListNode(9);
         l2.next.next = new ListNode(9);
         System.out.println(new AddTwoNums().addTwoNumbers(l1, l2));
+        System.out.println(new AddTwoNums().addTwoNumbersV3(l1, l2));
         System.out.println(new AddTwoNums().addTwoNumbersV2(l1, l2));
 
 
