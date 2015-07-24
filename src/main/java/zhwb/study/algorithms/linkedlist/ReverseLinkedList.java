@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.list;
+package zhwb.study.algorithms.linkedlist;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list/
@@ -42,11 +42,3 @@ public class ReverseLinkedList {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
