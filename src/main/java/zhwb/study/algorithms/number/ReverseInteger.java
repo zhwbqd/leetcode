@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.math;
+package zhwb.study.algorithms.number;
 
 /**
  * https://leetcode.com/problems/reverse-integer/
@@ -24,15 +24,14 @@ package zhwb.study.algorithms.math;
 public class ReverseInteger {
 
     public int reverse(int x) {
-        long result =0;
-        while(x != 0)
-        {
-            result = (result*10) + (x%10);
-            if(result > Integer.MAX_VALUE) return 0;
-            if(result < Integer.MIN_VALUE) return 0;
-            x = x/10;
+        long result = 0;
+        while (x != 0) {
+            result = (result * 10) + (x % 10);
+            if (result > Integer.MAX_VALUE) return 0;
+            if (result < Integer.MIN_VALUE) return 0;
+            x = x / 10;
         }
-        return (int)result;
+        return (int) result;
 
     }
 }

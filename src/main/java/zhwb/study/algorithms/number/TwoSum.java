@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.math;
+package zhwb.study.algorithms.number;
 
 import java.util.*;
 
