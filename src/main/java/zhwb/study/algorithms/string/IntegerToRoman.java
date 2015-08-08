@@ -44,13 +44,13 @@ public class IntegerToRoman {
         return sb.toString();
     }
 
-    private int handle(StringBuilder sb, int num, int dividend, String sign, int subDiv, String subSign) {
+    private int handle(StringBuilder sb, int num, int div, String sign, int subDiv, String subSign) {
         int factor;
         int remainder;
-        int temp = dividend - subDiv;
+        int temp = div - subDiv;
         if (num >= temp) {
-            factor = num / dividend;
-            remainder = num % dividend;
+            factor = num / div;
+            remainder = num % div;
             for (int i = 0; i < factor; i++) {
                 sb.append(sign);
             }
