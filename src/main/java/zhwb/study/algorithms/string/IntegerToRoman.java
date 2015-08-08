@@ -34,28 +34,19 @@ public class IntegerToRoman {
         StringBuilder sb = new StringBuilder();
 
         int remain = num;
-        remain = tenHandler(sb, remain, 1000, "M", 100, "C");
-        remain = tenHandler(sb, remain, 500, "D", 100, "C");
-        remain = tenHandler(sb, remain, 100, "C", 10, "X");
-        remain = tenHandler(sb, remain, 50, "L", 10, "X");
-        remain = tenHandler(sb, remain, 10, "X", 1, "I");
-        remain = tenHandler(sb, remain, 5, "V", 1, "I");
-        belowFiveHandler(sb, remain);
+        remain = handle(sb, remain, 1000, "M", 100, "C");
+        remain = handle(sb, remain, 500, "D", 100, "C");
+        remain = handle(sb, remain, 100, "C", 10, "X");
+        remain = handle(sb, remain, 50, "L", 10, "X");
+        remain = handle(sb, remain, 10, "X", 1, "I");
+        remain = handle(sb, remain, 5, "V", 1, "I");
+        handle(sb, remain, 1, "I", 0, "");
         return sb.toString();
     }
 
-    private void belowFiveHandler(StringBuilder sb, int remain) {
-        if (remain == 0) {
-            return;
-        }
-        for (int i = 0; i < remain; i++) {
-            sb.append("I");
-        }
-    }
-
-    private int tenHandler(StringBuilder sb, int num, int dividend, String sign, int subDiv, String subSign) {
-        int factor = 0;
-        int remainder = 0;
+    private int handle(StringBuilder sb, int num, int dividend, String sign, int subDiv, String subSign) {
+        int factor;
+        int remainder;
         int temp = dividend - subDiv;
         if (num >= temp) {
             factor = num / dividend;
