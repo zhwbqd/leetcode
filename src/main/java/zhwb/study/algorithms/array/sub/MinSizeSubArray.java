@@ -27,6 +27,21 @@ public class MinSizeSubArray {
         return minLen == Integer.MAX_VALUE ? 0 : minLen;
     }
 
+
+    /**
+     * As to NLogN solution, logN immediately reminds you of binary search.
+     * In this case, you cannot sort as the current order actually matters.
+     * How does one get an ordered array then? Since all elements are positive,
+     * the cumulative sum must be strictly increasing. Then,
+     * a subarray sum can expressed as the difference between two cumulative sum.
+     * Hence, given a start index for the cumulative sum array, the other end index can be searched using binary search.
+     *
+     * @param lo
+     * @param hi
+     * @param key
+     * @param sums
+     * @return
+     */
     private int binarySearch(int lo, int hi, int key, int[] sums) {
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
