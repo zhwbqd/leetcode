@@ -18,35 +18,38 @@ import java.util.Arrays;
 public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
+
         int min = Integer.MAX_VALUE;
-        int result = target;
-        for (int i = 0; i < nums.length - 2; i++) {
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
             int start = i + 1;
             int end = nums.length - 1;
-            while (start < end) {
-                int temp_sum = nums[i] + nums[start] + nums[end];
 
-                if (target < temp_sum) {
-                    if (temp_sum - target < min) {
-                        min = temp_sum - target;
-                        result = temp_sum;
-                    }
-                    while (start < end && nums[end] == nums[end - 1]) {
-                        end--;
+            while (start < end) {
+                int sum = nums[i] + nums[start] + nums[end];
+                if (sum == target) {
+                    return target;
+                } else if (sum > target) {
+                    if (sum - target < min) {
+                        min = sum - target;
+                        result = sum;
                     }
                     end--;
-                } else if (target > temp_sum) {
-                    if (target - temp_sum < min) {
-                        min = target - temp_sum;
-                        result = temp_sum;
-                    }
-                    while (start < end && nums[start] == nums[start + 1]) {
-                        start++;
+                } else {
+                    if (target - sum < min) {
+                        min = target - sum;
+                        result = sum;
                     }
                     start++;
-                } else return target;
+                }
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new ThreeSumClosest().threeSumClosest(new int[]{-1, 2, 1, -4}, 1));//2
+        System.out.println(new ThreeSumClosest().threeSumClosest(new int[]{0, 2, 1, -3}, 1));//0
+        System.out.println(new ThreeSumClosest().threeSumClosest(new int[]{0, 1,2}, 0));//3
     }
 }
