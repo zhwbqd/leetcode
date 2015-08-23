@@ -23,15 +23,15 @@ public class ReverseLinkedList {
     }
 
     public ListNode reverseListV2(ListNode head) {
-        ListNode first = null;
+        ListNode front = null;
         ListNode tail = head;
         while (tail != null) {
-            ListNode tmp = tail;
+            ListNode temp = tail;
             tail = tail.next;
-            tmp.next = first;
-            first = tmp;
+            temp.next = front;
+            front = temp;
         }
-        return first;
+        return front;
     }
 
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class ReverseLinkedList {
         ListNode node3 = new ListNode(4);
         node2.next = node3;
         node3.next = new ListNode(5);
-        System.out.println(new ReverseLinkedList().reverseList(node));
+        System.out.println(new ReverseLinkedList().reverseListV2(node));
     }
 }
 
