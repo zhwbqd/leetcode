@@ -17,7 +17,6 @@ import java.util.*;
  * (order does not matter).
  * <p/>
  * Date: 15/8/29
- * Time: ����2:13
  *
  * @author jack.zhang
  */
@@ -32,7 +31,7 @@ public class SubstringwithConcatenation {
             if (map.containsKey(s)) map.put(s, map.get(s) + 1);
             else map.put(s, 1);
         }
-        String str = null, tmp = null;
+        String str, tmp;
         for (int i = 0; i < gap; i++) {
             int count = 0;  // remark: reset count
             for (int l = i, r = i; r + gap <= sLength; r += gap) {
