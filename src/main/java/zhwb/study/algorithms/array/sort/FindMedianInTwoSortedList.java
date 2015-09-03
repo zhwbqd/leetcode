@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.array;
+package zhwb.study.algorithms.array.sort;
 
 /**
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
