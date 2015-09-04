@@ -21,28 +21,17 @@ public class SearchInsertPosition {
         int lo = 0;
         int length = nums.length;
         int hi = length - 1;
-        int mid = -1;
         while (lo <= hi) {
-            mid = (lo + hi) / 2;
-            if (nums[mid] >= target) {
-                hi = mid - 1;
-                if (mid >= 1 && nums[mid - 1] < target) {
-                    return mid;
-                }
-                if (mid == 0) {
-                    return mid;
-                }
-            } else {
+            int mid = (lo + hi) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
                 lo = mid + 1;
-                if (mid < length - 1 && nums[mid + 1] > target) {
-                    return mid + 1;
-                }
-                if (mid == length - 1) {
-                    return length;
-                }
+            } else {
+                hi = mid - 1;
             }
         }
-        return mid;
+        return lo;
     }
 
     public static void main(String[] args) {
@@ -51,9 +40,9 @@ public class SearchInsertPosition {
         System.out.println(new SearchInsertPosition().searchInsert(new int[]{1, 3, 5, 6}, 7));
         System.out.println(new SearchInsertPosition().searchInsert(new int[]{1, 3, 5, 6}, 0));
         System.out.println(new SearchInsertPosition().searchInsert(new int[]{1}, 2));
-        System.out.println(new SearchInsertPosition().searchInsert(new int[]{1,2}, 2));
+        System.out.println(new SearchInsertPosition().searchInsert(new int[]{1, 2}, 2));
         System.out.println(new SearchInsertPosition().searchInsert(new int[]{1}, 0));
         System.out.println(new SearchInsertPosition().searchInsert(new int[]{1}, 2));
-        System.out.println(new SearchInsertPosition().searchInsert(new int[]{1,3,5}, 1));
+        System.out.println(new SearchInsertPosition().searchInsert(new int[]{1, 3, 5}, 1));
     }
 }
