@@ -28,7 +28,7 @@ public class CombinationSumRecursive {
     public List<List<Integer>> combinationSum(final int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(candidates);
-        //核心思路: 每个元素叠加后将target-candidate[i]作为target, 继续查找, 直至target==0 当前递归退出.
+        //核心思路: 每个元素叠加后将target-candidate[i]作为新的target, 继续查找, 直至target<=0 当前递归退出.
         subComb(candidates, result, new ArrayList<Integer>(), 0, target);
 
         return result;
