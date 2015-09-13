@@ -58,6 +58,31 @@ public class Permutations {
         }
     }
 
+    public List<List<Integer>> permuteBackTrackingV2(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> current = new ArrayList<>();
+        boolean[] visited = new boolean[nums.length];
+        permute(result, current, nums, visited);
+        return result;
+    }
+
+    private void permute(List<List<Integer>> result, List<Integer> current, int[] num, boolean[] visited) {
+        if (current.size() == num.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+        for (int i = 0; i < num.length; i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+                current.add(num[i]);
+                permute(result, current, num, visited);
+                current.remove(current.size() - 1);
+                visited[i] = false;
+            }
+        }
+    }
+
+
     private void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
@@ -67,6 +92,7 @@ public class Permutations {
     public static void main(String[] args) {
         System.out.println(new Permutations().permuteBackTracking(new int[]{1, 2, 3}));
         System.out.println(new Permutations().permute(new int[]{1, 2, 3}));
+        System.out.println(new Permutations().permuteBackTrackingV2(new int[]{1, 2, 3}));
     }
 
 }
