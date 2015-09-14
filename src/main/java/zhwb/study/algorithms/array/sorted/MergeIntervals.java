@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.array.sort;
+package zhwb.study.algorithms.array.sorted;
 
 import java.util.ArrayList;
 import java.util.Collections;

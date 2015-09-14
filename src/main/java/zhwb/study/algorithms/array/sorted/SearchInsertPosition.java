@@ -1,4 +1,4 @@
-package zhwb.study.algorithms.array.sort;
+package zhwb.study.algorithms.array.sorted;
 
 /**
  * https://leetcode.com/problems/search-insert-position/
