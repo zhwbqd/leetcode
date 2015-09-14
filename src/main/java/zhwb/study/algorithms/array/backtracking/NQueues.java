@@ -58,6 +58,7 @@ public class NQueues {
         }
 
         for (int i = 0; i < board.length; i++) {
+            //对于每一行, 从第一列开始, 进行检查. 与回溯查找
             if (validate(col, i, board)) {
                 board[i][col] = 'Q';
                 solve(col + 1, board, result);
@@ -69,7 +70,7 @@ public class NQueues {
     private boolean validate(int col, int row, char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < col; j++) {
-                if (board[i][j] == 'Q' && (col + row == i + j || col + i == row + j || row == i)) {
+                if (board[i][j] == 'Q' && (col + row == i + j || col + i == row + j || row == i)) {//当前单元格有Q, 且位于同一行列或者斜线
                     return false;
                 }
             }
@@ -78,7 +79,7 @@ public class NQueues {
     }
 
     public static void main(String[] args) {
-        System.out.println(new NQueues().solveNQueens(3));
+        System.out.println(new NQueues().solveNQueens(8).size());
 
     }
 }
