@@ -80,6 +80,7 @@ public class NQueues {
 
     public static void main(String[] args) {
         System.out.println(new NQueues().solveNQueens(8).size());
+        System.out.println(new NQueues().solveNQueens(7).size());
 
     }
 }

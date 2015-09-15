@@ -4,6 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://leetcode.com/problems/n-queens-ii/
+ * <p/>
+ * Follow up for N-Queens problem.
+ * <p/>
+ * Now, instead outputting board configurations, return the total number of distinct solutions.
+ *
  * @author jack.zhang
  * @since 2015/9/15 0015
  */
