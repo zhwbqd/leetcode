@@ -40,7 +40,7 @@ public class LengthOfLastWord {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LengthOfLastWord().lengthOfLastWord("Hello World"));
-        System.out.println(new LengthOfLastWord().lengthOfLastWord("a "));
+        System.out.println(new LengthOfLastWord().lengthOfLastWordV2("Hello World"));
+        System.out.println(new LengthOfLastWord().lengthOfLastWordV2("a "));
     }
 }
